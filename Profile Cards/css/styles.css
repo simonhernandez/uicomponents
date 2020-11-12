@@ -1,0 +1,167 @@
+/* ---- Google Fonts ---- */
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;700&display=swap');
+/* ---- Custom Properties ---- */
+:root{
+    /* Colors */
+    --color-dark: #202842;
+    --color-white: #FFF;
+    --color-gray: #6A6D78;
+    --color-purple: #748dff;
+    --color-dimPurple: #D9DCEA;
+    --color-bg: #EFF1F7;
+    
+    /* Fonts and Typography */
+    --ff-primary: 'Open Sans', sans-serif;
+
+    --fs-h3: 1rem;
+    --fs-normal: .913rem;
+    --fs-small: .745rem;
+
+    --fw-reg: 400;
+    --fw-bold: 700;
+
+    /* Box Shadow */
+    --bxs-card: 0px 15px 27px -5px rgba(116, 141, 255, .25);
+}
+
+/* ---- General Styles ---- */
+
+/* Reset */
+
+*,
+*::before,
+*::after{
+    margin: 0;
+    padding: 0;
+    box-sizing: inherit;
+}
+
+html{
+    box-sizing: border-box;
+    font-size: 100%;
+}
+
+body{
+    background-color: var(--color-bg);
+}
+
+img{
+    max-width: 100%;
+    display: block;
+}
+
+button{
+    cursor: pointer;
+    background: none;
+    outline: none;
+    border: none;
+    font-family: inherit;
+}
+
+/* Typography */
+
+body{
+    font-weight: var(--fw-reg);
+    font-size: var(--fs-normal);
+    font-family: var(--ff-primary);
+    color: var(--color-dark);
+}
+
+h2{
+    font-size: var(--fs-h2);
+}
+
+small{
+    font-size: var(--fs-small);
+}
+
+/* Components */
+
+.btn{
+    padding: .875rem 3.625rem;
+    font-weight: var(--fw-bold);
+}
+
+.btn--ghost{
+    border: .125rem solid var(--color-dimPurple);
+    border-radius: .3125rem;
+    color: var(--color-gray);
+    opacity: .85;
+}
+
+.btn--ghost:hover{
+    background-color: var(--color-purple);
+    color: var(--color-white);
+    border-color: var(--color-purple);
+}
+
+/* ---- Layout Styles ---- */
+
+.container{
+    max-width: 1200px;
+    min-height: 100vh;
+    margin: 0 auto;
+    padding: 2rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+}
+
+/* ---- Profile Cards Styles ---- */
+
+.profile{
+    width: 30%;
+    width: 320px;
+    background-color: var(--color-white);
+    border-radius: .625rem;
+    padding: 3.5rem;
+    transition: all .35s ease-out;
+}
+
+.profile:hover{
+    box-shadow: var(--bxs-card);
+    transform: scale(1.2);
+}
+
+.profile:hover img{
+    box-shadow: var(--bxs-card);
+}
+
+.profile:nth-of-type(2){
+    margin: 0 1rem 0;
+}
+
+.profile > *:not(:last-child){
+    margin-bottom: 2.5rem;
+}
+
+.profile__img{
+    width: 6rem;
+    height: 6rem;
+    border-radius: 50%;
+    margin: 0 auto;
+    transition: all .35s ease-out;
+}
+
+.profile__text{
+    text-align: center;
+}
+
+.profile__user-name{
+    margin-bottom: .25rem;
+}
+
+.profile__user-role{
+    color: var(--color-gray);
+}
+
+.profile .btn{
+    width: 100%;
+}
+
+@media screen and (max-width: 1050px){
+    .profile:nth-of-type(2){
+        margin: 1rem;
+    }
+}
