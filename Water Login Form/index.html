@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Log In Form</title>
+
+    <!-- Box Icons -->
+    <link href='https://unpkg.com/boxicons@2.0.7/css/boxicons.min.css' rel='stylesheet'>
+
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="./css/styles.css">
+</head>
+<body>
+    <!-- Container -->
+    <div class="container">
+
+        <!-- Log In -->
+        <div class="login">
+            <!-- Log In Image -->
+            <div class="login__img"></div>
+
+            <!-- Log In Form -->
+            <form class="form">
+
+                <!-- Form Title -->
+                <div class="form__title">
+                    <h2 class="heading heading--2">Log In</h2>
+                    <p class="paragraph">Log in to your account to upload or download pictures, videos or music.</p>
+                </div>
+
+                <!-- Form Control - Email -->
+                <div class="form__control">
+                    <label for="email">Email</label>
+                    <input type="email" id="email" placeholder="Enter your email">
+                </div>
+
+                <!-- Form Control - Password -->
+                <div class="form__control">
+                    <label for="password">Password</label>
+                    <input type="password" id="password" placeholder="Enter your password">
+                </div>
+
+                <!-- Form Actions -->
+                <div class="form__actions">
+                    <a href="#" class="form__forgot">Forgot password?</a>
+
+                    <button class="btn btn--primary">Log In <i class='bx bx-right-arrow-alt bx-xs'></i></button>
+                </div>
+
+                <hr>
+
+                <small>Or login with</small>
+
+                <!-- Form Buttons -->
+                <div class="form__buttons">
+                    <button class="btn btn--ghost">
+                        <img src="./img/facebook.svg" alt="Facebook Logo">
+                        Facebook
+                    </button>
+                    <button class="btn btn--ghost">
+                        <img src="./img/google.svg" alt="Google Logo">
+                        Google
+                    </button>
+                </div>
+
+                <small class="form__signup">Don't have an account yet? <a href="#">Sign Up</a></small>
+            </form>
+
+        </div>
+    </div>
+</body>
+</html>

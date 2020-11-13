@@ -1,0 +1,260 @@
+/* ---- Google Fonts ---- */
+@import url('https://fonts.googleapis.com/css2?family=Mulish:wght@400;700&family=Rokkitt:wght@700&display=swap');
+/* ---- Custom Properties ---- */
+:root{
+    /* Colors */
+    --color-primary: #046586;
+    --color-secondary: #F0D3D3;
+    --color-bg: #F8EFEF;
+    --color-dark: #161843;
+    --color-white: #FFF;
+    --color-gray: #CAD6E4;
+
+    /* Fonts and Typography */
+    --ff-primary: 'Rokkitt', sans-serif;
+    --ff-secondary: 'Mulish', sans-serif;
+
+    --fs-h2: 1.75rem;
+    --fs-normal: .913rem;
+    --fs-small: .745rem;
+    --fs-medium: 1rem;
+
+    --fw-reg: 400;
+    --fw-bold: 700;
+
+    /* Box Shadow */
+    --bxs-btn: 0px 6px 19px -10px rgba(4, 101, 134, .65);
+    --bxs-form: 0px 15px 27px -5px rgba(240, 211, 211, .95);
+}
+
+@media screen and (min-width: 767px){
+    :root{
+        --fs-h2: 2.25rem;
+        --fs-normal: 1rem;
+        --fs-small: .875rem;
+        --fs-medium: 1.125rem;
+    }
+}
+/* ---- General Styles ---- */
+/* Reset */
+*,
+*::before,
+*::after{
+    margin: 0;
+    padding: 0;
+    box-sizing: inherit;
+}
+
+html{
+    box-sizing: border-box;
+    font-size: 100%;
+}
+
+img{
+    max-width: 100%;
+    display: block;
+}
+
+a{
+    text-decoration: none;
+    color: inherit;
+}
+
+button{
+    cursor: pointer;
+    background: none;
+    outline: none;
+    border: none;
+    font-family: inherit;
+}
+
+label{
+    cursor: pointer;
+}
+
+input{
+    font-family: inherit;
+}
+
+/* Typography */
+body{
+    font-weight: var(--fw-reg);
+    font-size: var(--fs-normal);
+    font-family: var(--ff-secondary);
+    color: var(--color-dark);
+}
+
+h2{
+    font-size: var(--fs-h2);
+    font-family: var(--ff-primary);
+}
+
+small{
+    font-size: var(--fs-small);
+}
+
+label{
+    font-weight: var(--fw-bold);
+}
+
+/* Components */
+
+.btn{
+    border-radius: .3125rem;
+    font-weight: var(--fw-bold);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transition: all .125s ease-out;
+}
+
+.btn img{
+    margin-right: .625rem;
+}
+
+.btn--primary{
+    background-color: var(--color-primary);
+    color: var(--color-white);
+    padding: 1rem 2rem;
+    box-shadow: var(--bxs-btn);
+}
+
+.btn--primary:hover{
+    opacity: .7;
+}
+
+.btn--ghost{
+    background-color: transparent;
+    border: 1px solid var(--color-gray);
+    padding: .625rem 2.75rem;
+}
+
+.btn--ghost:hover{
+    border-color: var(--color-primary);
+}
+
+/* ---- Layout Styles ---- */
+.container{
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: var(--color-bg);
+    padding: 2rem;
+}
+
+/* ---- Login Styles ---- */
+
+.login{
+    width: 100%;
+    max-width: 900px;
+    overflow: hidden;
+    border-radius: .9375rem;
+    background-color: var(--color-white);
+    box-shadow: var(--bxs-form);
+}
+
+.login__img{
+    background-image: url(../img/Sailing\ Boat.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center center;
+    height: 12.5rem;
+}
+
+.form{
+    padding: 2rem;
+}
+
+.form__title{
+    margin-bottom: 2rem;
+}
+
+.form__title .paragraph{
+    max-width: 21.25rem;
+}
+
+.form__control{
+    margin-bottom: 1rem;
+    display: flex;
+    flex-direction: column;
+}
+
+.form__control label{
+    margin-bottom: .4rem;
+}
+
+.form__control input{
+    padding: .8rem;
+}
+
+.form__control input:focus{
+    border-color: var(--color-primary);
+    outline-color: var(--color-primary);
+}
+
+.form__actions{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.form__actions a{
+    color: var(--color-primary);
+}
+
+.form hr{
+    margin: 2rem 0;
+}
+
+.form small{
+    display: block;
+    text-align: center;
+}
+
+.form__buttons{
+    margin: 2rem 0;
+}
+
+.form__buttons >*:not(:last-child){
+    margin-bottom: 1rem;
+}
+
+.form__buttons .btn{
+    width: 100%;
+}
+
+.form__signup a{
+    color: var(--color-primary);
+    text-decoration: underline;
+}
+
+
+/* ---- Media Queries ---- */
+
+@media screen and (min-width: 767px){
+    .login{
+        display: flex;
+    }
+
+    .login__img{
+        flex: 45%;
+        height: initial;
+    }
+
+    .form{
+        flex: 65%;
+    }
+
+    .form__buttons{
+        display: flex;
+    }
+
+    .form__buttons .btn:first-of-type{
+        margin-right: 1rem;
+    }
+
+    .form__buttons >*:not(:last-child){
+        margin-bottom: initial;
+    }
+}
