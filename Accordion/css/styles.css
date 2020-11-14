@@ -1,0 +1,155 @@
+/* ---- Google Fonts ---- */
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;700&display=swap');
+/* ---- Custom Properties ---- */
+:root{
+    /* Colors */
+    --color-dark: #202842;
+    --color-white: #FFF;
+    --color-gray: #6A6D78;
+    --color-yellow: #FFC48B;
+    --color-dimYellow: #FFF6EE;
+    --color-purple: #B4B3FF;
+    --color-dimPurple: #FAFAFF;
+    --color-red: #FFB3C0;
+    --color-dimRed: #FFF0F3;
+    --color-bg: #FFFDF8;
+    
+    /* Fonts and Typography */
+    --ff-primary: 'Open Sans', sans-serif;
+
+    --fs-h2: 1.125rem;
+    --fs-normal: .913rem;
+    --fs-small: .745rem;
+
+    --fw-reg: 400;
+    --fw-bold: 700;
+
+    /* Box Shadow */
+    --bxs-card: 0px 5px 27px -5px rgba(116, 141, 255, .25);
+}
+
+/* ---- General Styles ---- */
+
+/* Reset */
+
+*,
+*::before,
+*::after{
+    margin: 0;
+    padding: 0;
+    box-sizing: inherit;
+}
+
+html{
+    box-sizing: border-box;
+    font-size: 100%;
+}
+
+body{
+    background-color: var(--color-bg);
+}
+
+ul{
+    list-style: none;
+}
+
+/* Typography */
+
+body{
+    font-weight: var(--fw-reg);
+    font-size: var(--fs-normal);
+    font-family: var(--ff-primary);
+    color: var(--color-dark);
+}
+
+h2{
+    font-size: var(--fs-h2);
+}
+
+small{
+    font-size: var(--fs-small);
+}
+
+/* ---- Layout Styles ---- */
+
+.container{
+    max-width: 1200px;
+    min-height: 100vh;
+    margin: 0 auto;
+    padding: 2rem;
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+}
+
+/* ---- Accordion Styles ---- */
+
+.accordion{
+    width: 100%;
+    max-width: 30rem;
+    background-color: var(--color-white);
+    padding: 2rem;
+    border-radius: 1rem;
+    box-shadow: var(--bxs-card);
+}
+
+.accordion__title{
+    margin-bottom: 2rem;
+}
+
+.accordion__item{
+    padding: 1.5rem;
+    border-radius: .3125rem;
+    border-left: .375rem solid yellow;
+}
+
+.accordion__item:not(:last-of-type){
+    margin-bottom: .5rem;
+}
+
+.accordion__item--yellow{
+    background-color: var(--color-dimYellow);
+    border-left-color: var(--color-yellow);
+}
+
+.accordion__item--purple{
+    background-color: var(--color-dimPurple);
+    border-left-color: var(--color-purple);
+}
+
+.accordion__item--red{
+    background-color: var(--color-dimRed);
+    border-left-color: var(--color-red);
+}
+
+.accordion__details{
+    position: relative;
+    padding-left: 2rem;
+    cursor: pointer;
+    transition: all .25s ease-out;
+}
+
+.accordion__details::before{
+    content: '+';
+    font-size: 1.5rem;
+    position: absolute;
+    left: 0;
+    top: -.35rem;
+    transition: all .25s ease-out;
+}
+
+.accordion__details[open]::before{
+    transform: rotate(45deg);
+}
+
+.accordion__summary{
+    outline: none;
+}
+
+.accordion__summary::-webkit-details-marker{
+    display: none;
+}
+
+.accordion__text{
+    margin-top: 1rem;
+}
