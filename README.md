@@ -14,3 +14,6 @@ Here you will find responsive UI Components based on beautiful designs I find on
   * [Preview](https://codepen.io/simonhernandez/pen/wvWQmEo)
   * Design by [UI Desgin Daily](https://uidesigndaily.com/posts/figma-log-in-authentication-sign-up-modal-pop-card-day-1097)
 
+* **04** - Accordion
+  * [Preview](https://codepen.io/simonhernandez/pen/VwjqPQR)
+  * Design by [UI Desgin Daily](https://uidesigndaily.com/posts/sketch-accordion-day-1220)
