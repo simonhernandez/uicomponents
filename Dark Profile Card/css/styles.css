@@ -1,0 +1,201 @@
+/* ---- Google Fonts ---- */
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;700&display=swap');
+/* ---- Custom Properties ---- */
+:root{
+    /* Colors */
+    --color-white: #FFF;
+    --color-gray: #B3B8CD;
+    --color-blue: #03BFCB;
+    --color-yellow: #FEBB0B;
+    --color-purple: #231E39;
+    --color-dimPurple: #2D2747;
+    --color-darkPurple: #1F1A36;
+    --color-bg: #28223F;
+    
+    /* Fonts and Typography */
+    --ff-primary: 'Montserrat', sans-serif;
+
+    --fs-h3: 1.125rem;
+    --fs-normal: .913rem;
+    --fs-small: .745rem;
+
+    --fw-reg: 400;
+    --fw-med: 500;
+    --fw-bold: 700;
+
+    /* Box Shadow */
+    --bxs-card: 0px 15px 27px -5px rgba(29, 24, 50, .95);
+}
+
+/* ---- General Styles ---- */
+
+/* Reset */
+
+*,
+*::before,
+*::after{
+    margin: 0;
+    padding: 0;
+    box-sizing: inherit;
+}
+
+html{
+    box-sizing: border-box;
+    font-size: 100%;
+}
+
+body{
+    background-color: var(--color-bg);
+}
+
+ul{
+    list-style: none;
+}
+
+button{
+    cursor: pointer;
+    border: none;
+    outline: none;
+    background: none;
+    font-family: inherit;
+}
+
+/* Typography */
+
+body{
+    font-weight: var(--fw-reg);
+    font-size: var(--fs-normal);
+    font-family: var(--ff-primary);
+    color: var(--color-gray);
+}
+
+h3{
+    font-size: var(--fs-h3);
+}
+
+small{
+    font-size: var(--fs-small);
+}
+
+/* Components */
+.btn{
+    padding: 1.125rem 0;
+    border-radius: .1875rem;
+    font-weight: var(--fw-med);
+}
+
+.btn--primary{
+    background-color: var(--color-blue);
+    border: .0625rem solid var(--color-blue);
+    color: var(--color-purple);
+}
+
+.btn--primary:hover{
+    opacity: .75;
+}
+
+.btn--ghost{
+    border: .0625rem solid var(--color-blue);
+    color: var(--color-gray);
+}
+
+.btn--ghost:hover{
+    background-color: var(--color-blue);
+    color: var(--color-purple);
+    border-color: var(--color-purple);
+}
+
+/* ---- Layout Styles ---- */
+
+.container{
+    max-width: 1200px;
+    min-height: 100vh;
+    margin: 0 auto;
+    padding: 2rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+/* ---- Profile Card Styles ---- */
+
+.user-profile{
+    width: 100%;
+    max-width: 350px;
+    border-radius: .625rem;
+    overflow: hidden;
+    box-shadow: var(--bxs-card);
+}
+
+.user-profile__data{
+    position: relative;
+    background-color: var(--color-purple);
+    padding: 2.5rem;
+}
+
+.user-profile__badge{
+    position: absolute;
+    top: 1.5rem;
+    left: 1.5rem;
+    background-color: var(--color-yellow);
+    color: var(--color-purple);
+    border-radius: .3125rem;
+    padding: .25rem .5rem;
+    text-transform: uppercase;
+    font-weight: var(--fw-bold);
+    font-size: var(--fs-small);
+}
+
+.user-profile__image-container{
+    width: 7.25rem;
+    height: 7.25rem;
+    overflow: hidden;
+    margin: 0 auto;
+    border-radius: 50%;
+    border: 2.5px solid var(--color-blue);
+    margin-bottom: 1.5rem;
+}
+
+.user-profile__text-container{
+    text-align: center;
+    margin-bottom: 1.5rem;
+}
+
+.user-profile__text-container > *:not(:last-child){
+    margin-bottom: 1rem;
+}
+
+.user-profile__buttons{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+}
+
+.user-profile__buttons .btn{
+    width: 48%;
+}
+
+.user-profile__skills{
+    background-color: var(--color-darkPurple);
+    padding: 1rem;
+}
+
+.user-profile__skills-list{
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.user-profile__skill{
+    border: .125rem solid var(--color-dimPurple);
+    border-radius: .1875rem;
+    padding: .5rem;
+    margin: .4rem;
+    font-size: var(--fs-small);
+    font-weight: var(--fw-med);
+}
+
+.user-profile__skill:hover{
+    background-color: var(--color-blue);
+    color: var(--color-darkPurple);
+}
