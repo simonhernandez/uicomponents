@@ -17,3 +17,7 @@ Here you will find responsive UI Components based on beautiful designs I find on
 * **04** - Accordion
   * [Preview](https://codepen.io/simonhernandez/pen/VwjqPQR)
   * Design by [UI Desgin Daily](https://uidesigndaily.com/posts/sketch-accordion-day-1220)
+
+* **05** - Dark Profile Card
+  * [Preview](https://codepen.io/simonhernandez/pen/gOMZWqQ)
+  * Design by [UI Desgin Daily](https://uidesigndaily.com/posts/sketch-profile-card-user-day-801)
